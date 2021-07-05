@@ -1,0 +1,43 @@
+{
+    "name": "auto-standard-version",
+    "version": "0.0.1",
+    "description": "版本自动化控制工具",
+    "files": [
+        "src"
+    ],
+    "main": "./src/main.js",
+    "exports": {
+        ".": {
+            "require": "./src/main.js"
+        }
+    },
+    "scripts": {
+        "release": "node release.js"
+    },
+    "dependencies": {
+        "chalk": "^4.1.1",
+        "enquirer": "^2.3.6",
+        "execa": "^5.0.0",
+        "semver": "^7.3.5",
+        "standard-version": "^9.3.0",
+        "vue": "^3.1.0-beta.6"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^12.1.1",
+        "@commitlint/config-conventional": "^12.1.1",
+        "conventional-changelog-cli": "^2.1.1",
+        "cz-conventional-changelog": "3.3.0",
+        "husky": "^6.0.0",
+        "vite": "^2.2.3"
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    },
+    "husky": {
+        "hooks": {
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+        }
+    }
+}
