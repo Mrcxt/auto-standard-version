@@ -1,6 +1,6 @@
 {
     "name": "auto-standard-version",
-    "version": "0.0.1",
+    "version": "0.1.0-beta.0",
     "description": "版本自动化控制工具",
     "files": [
         "src"
